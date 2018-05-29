@@ -9,9 +9,8 @@
 #include <stdio.h>
 
 static bool isvowel(char a){
-	return
-			a==A||a==tolower(A)||a==E||a==tolower(E)||a==I||a==tolower(I)||
-			a==O||a==tolower(O)||a==U||a==tolower(U);
+	return a==A||a==tolower(A)||a==E||a==tolower(E)||
+			a==I||a==tolower(I)||a==O||a==tolower(O)||a==U||a==tolower(U);
 }
 
 static void getvowel(const char* a, char* b, int i, int* k){
