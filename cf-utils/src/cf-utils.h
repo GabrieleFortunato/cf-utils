@@ -10,17 +10,9 @@
 
 #include <assert.h>
 #include <ctype.h>
-#include <stdbool.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <string.h>
-
-#define ZERO   0
-#define A     'A'
-#define E     'E'
-#define I     'I'
-#define O     'O'
-#define U     'U'
-#define EOS   '\0'
 
 /**
  * Estrae le consonanti e le vocali da una stringa di caratteri.
