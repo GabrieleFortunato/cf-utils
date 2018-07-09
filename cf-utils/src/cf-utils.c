@@ -17,7 +17,7 @@ static const char A = 'A';
 
 static bool is_vowel(char a){
 	return a == A || a == tolower(A) || a == E || a == tolower(E) || a == I ||
-			a == tolower(I) || a == O || a == tolower(O) || a == U|| a == tolower(U);
+		   a == tolower(I) || a == O || a == tolower(O) || a == U|| a == tolower(U);
 }
 
 static bool is_consonant(char a){
