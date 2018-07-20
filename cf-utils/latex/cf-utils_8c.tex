@@ -1,119 +1,36 @@
-\hypertarget{cf-utils_8c}{}\section{src/cf-\/utils.c File Reference}
-\label{cf-utils_8c}\index{src/cf-\/utils.\+c@{src/cf-\/utils.\+c}}
-{\ttfamily \#include \char`\"{}cf-\/utils.\+h\char`\"{}}\newline
+\hypertarget{cf-utils_8c}{\section{src/cf-\/utils.c File Reference}
+\label{cf-utils_8c}\index{src/cf-\/utils.\-c@{src/cf-\/utils.\-c}}
+}
+{\ttfamily \#include \char`\"{}cf-\/utils.\-h\char`\"{}}\\*
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-static bool \hyperlink{cf-utils_8c_abe4e536dc09d41a523c0ed260dfca457}{is\+\_\+vowel} (char a)
+int \hyperlink{cf-utils_8c_a3aec4bc9ade9233c7c43bf64d38bc529}{get\-\_\-vowel} (const char $\ast$text, int i, int k, char $\ast$cons)
 \item 
-static bool \hyperlink{cf-utils_8c_ad3e5bf79af86d63a23de009cc0c567f3}{is\+\_\+consonant} (char a)
+int \hyperlink{cf-utils_8c_ad3a710147fcfa74c82b72f4339e5d729}{get\-\_\-consonant} (const char $\ast$text, int i, int k, char $\ast$cons)
 \item 
-static void \hyperlink{cf-utils_8c_a84a167d1e68d87ee5bdb1f2b1d530ae4}{get\+\_\+vowel} (const char $\ast$text, char $\ast$vow, int i, int $\ast$k)
-\item 
-static void \hyperlink{cf-utils_8c_a9fb030103225ea13ffd73f5c884f69ae}{get\+\_\+vowels} (const char $\ast$text, char $\ast$vow)
-\item 
-static void \hyperlink{cf-utils_8c_af560af2a103a6552e35c76b679a3bd86}{get\+\_\+consonant} (const char $\ast$text, char $\ast$cons, int i, int $\ast$k)
-\item 
-static void \hyperlink{cf-utils_8c_a83e0c1cae14b4a73e1c3bfcc3ba019ff}{get\+\_\+consonants} (const char $\ast$text, char $\ast$cons)
-\item 
-static bool \hyperlink{cf-utils_8c_a718abaf67368591b221ce02599cef8e2}{all\+\_\+consonants} (char $\ast$string)
-\item 
-static bool \hyperlink{cf-utils_8c_a16c354a62b5576b8d3467f88d3c053ae}{all\+\_\+vowels} (char $\ast$string)
-\item 
-static bool \hyperlink{cf-utils_8c_adee573db7c57d7c556d73fec014eef5c}{char\+\_\+in\+\_\+text} (const char $\ast$text, char a)
-\item 
-static bool \hyperlink{cf-utils_8c_a6e46433aa46161430fad365e577878e6}{string\+\_\+in\+\_\+text} (const char $\ast$text, char $\ast$string)
-\item 
-void \hyperlink{cf-utils_8c_a4721e1e7e0b6b0fece1aafcc9d4e0077}{cons\+\_\+vow} (const char $\ast$text, char $\ast$cons, char $\ast$vow)
-\end{DoxyCompactItemize}
-\subsection*{Variables}
-\begin{DoxyCompactItemize}
-\item 
-static const char \hyperlink{cf-utils_8c_ae8ab676de0a059d5911f0fc60fe47a1e}{E\+OS} = \textquotesingle{}\textbackslash{}0\textquotesingle{}
-\item 
-static const int \hyperlink{cf-utils_8c_acdb9580f8c1b2955aa58958261a6c582}{Z\+E\+RO} = 0
-\item 
-static const char \hyperlink{cf-utils_8c_a90784a38cd61f391acb0d43bac12558d}{U} = \textquotesingle{}U\textquotesingle{}
-\item 
-static const char \hyperlink{cf-utils_8c_ada65313d692e42532499ce96bd3150e7}{O} = \textquotesingle{}O\textquotesingle{}
-\item 
-static const char \hyperlink{cf-utils_8c_ab9cfcf92a6915b736872d475dd536aa6}{I} = \textquotesingle{}I\textquotesingle{}
-\item 
-static const char \hyperlink{cf-utils_8c_ad9a4713c071a9d59ce6c367755a21207}{E} = \textquotesingle{}E\textquotesingle{}
-\item 
-static const char \hyperlink{cf-utils_8c_a530d2fc72f6a33c2d8cddd40bf4e7a34}{A} = \textquotesingle{}A\textquotesingle{}
+void \hyperlink{cf-utils_8c_a4721e1e7e0b6b0fece1aafcc9d4e0077}{cons\-\_\-vow} (const char $\ast$text, char $\ast$cons, char $\ast$vow)
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{cf-utils_8c_a718abaf67368591b221ce02599cef8e2}\label{cf-utils_8c_a718abaf67368591b221ce02599cef8e2}} 
-\index{cf-\/utils.\+c@{cf-\/utils.\+c}!all\+\_\+consonants@{all\+\_\+consonants}}
-\index{all\+\_\+consonants@{all\+\_\+consonants}!cf-\/utils.\+c@{cf-\/utils.\+c}}
-\subsubsection{\texorpdfstring{all\+\_\+consonants()}{all\_consonants()}}
-{\footnotesize\ttfamily static bool all\+\_\+consonants (\begin{DoxyParamCaption}\item[{char $\ast$}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Definition at line 51 of file cf-\/utils.\+c.
-
-
-
-References is\+\_\+consonant(), and Z\+E\+RO.
-
-
-
-Referenced by cons\+\_\+vow().
-
-\mbox{\Hypertarget{cf-utils_8c_a16c354a62b5576b8d3467f88d3c053ae}\label{cf-utils_8c_a16c354a62b5576b8d3467f88d3c053ae}} 
-\index{cf-\/utils.\+c@{cf-\/utils.\+c}!all\+\_\+vowels@{all\+\_\+vowels}}
-\index{all\+\_\+vowels@{all\+\_\+vowels}!cf-\/utils.\+c@{cf-\/utils.\+c}}
-\subsubsection{\texorpdfstring{all\+\_\+vowels()}{all\_vowels()}}
-{\footnotesize\ttfamily static bool all\+\_\+vowels (\begin{DoxyParamCaption}\item[{char $\ast$}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Definition at line 59 of file cf-\/utils.\+c.
-
-
-
-References is\+\_\+vowel(), and Z\+E\+RO.
-
-
-
-Referenced by cons\+\_\+vow().
-
-\mbox{\Hypertarget{cf-utils_8c_adee573db7c57d7c556d73fec014eef5c}\label{cf-utils_8c_adee573db7c57d7c556d73fec014eef5c}} 
-\index{cf-\/utils.\+c@{cf-\/utils.\+c}!char\+\_\+in\+\_\+text@{char\+\_\+in\+\_\+text}}
-\index{char\+\_\+in\+\_\+text@{char\+\_\+in\+\_\+text}!cf-\/utils.\+c@{cf-\/utils.\+c}}
-\subsubsection{\texorpdfstring{char\+\_\+in\+\_\+text()}{char\_in\_text()}}
-{\footnotesize\ttfamily static bool char\+\_\+in\+\_\+text (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text,  }\item[{char}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Definition at line 66 of file cf-\/utils.\+c.
-
-
-
-References Z\+E\+RO.
-
-
-
-Referenced by string\+\_\+in\+\_\+text().
-
-\mbox{\Hypertarget{cf-utils_8c_a4721e1e7e0b6b0fece1aafcc9d4e0077}\label{cf-utils_8c_a4721e1e7e0b6b0fece1aafcc9d4e0077}} 
-\index{cf-\/utils.\+c@{cf-\/utils.\+c}!cons\+\_\+vow@{cons\+\_\+vow}}
-\index{cons\+\_\+vow@{cons\+\_\+vow}!cf-\/utils.\+c@{cf-\/utils.\+c}}
-\subsubsection{\texorpdfstring{cons\+\_\+vow()}{cons\_vow()}}
-{\footnotesize\ttfamily void cons\+\_\+vow (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text,  }\item[{char $\ast$}]{cons,  }\item[{char $\ast$}]{vow }\end{DoxyParamCaption})}
-
-Estrae le consonanti e le vocali da una stringa di caratteri. La procedura popola due array (parametri di output) secondo questo criterio\+: nell\textquotesingle{}array cons sono inserite tutte le consonanti di text (nell\textquotesingle{}ordine in cui compaiono), mentre in vow sono inserite tutte le vocali di text (nell\textquotesingle{}ordine in cui compaiono).
+\hypertarget{cf-utils_8c_a4721e1e7e0b6b0fece1aafcc9d4e0077}{\index{cf-\/utils.\-c@{cf-\/utils.\-c}!cons\-\_\-vow@{cons\-\_\-vow}}
+\index{cons\-\_\-vow@{cons\-\_\-vow}!cf-utils.c@{cf-\/utils.\-c}}
+\subsubsection[{cons\-\_\-vow}]{\setlength{\rightskip}{0pt plus 5cm}void cons\-\_\-vow (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{text, }
+\item[{char $\ast$}]{cons, }
+\item[{char $\ast$}]{vow}
+\end{DoxyParamCaption}
+)}}\label{cf-utils_8c_a4721e1e7e0b6b0fece1aafcc9d4e0077}
+Estrae le consonanti e le vocali da una stringa di caratteri. La procedura popola due array (parametri di output) secondo questo criterio\-: nell'array cons sono inserite tutte le consonanti di text (nell'ordine in cui compaiono), mentre in vow sono inserite tutte le vocali di text (nell'ordine in cui compaiono).
 
 \begin{DoxyWarning}{Warning}
 Il case delle lettere deve essere rispettato. 
 
 I caratteri non afabetici devono essere ignorati. 
 
-La lettera \textquotesingle{}Y\textquotesingle{} o \textquotesingle{}y\textquotesingle{} è considerata consonante. 
+La lettera 'Y' o 'y' è considerata consonante. 
 
 tutti i parametri sono stringhe.
 \end{DoxyWarning}
@@ -127,7 +44,7 @@ tutti i parametri sono stringhe.
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
-nessun parametro deve essere N\+U\+LL 
+nessun parametro deve essere N\-U\-L\-L 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
 la lunghezza di str non deve essere inferiore alla somma delle lunghezze di cons e di vow 
@@ -142,236 +59,33 @@ tutti i caratteri di vow devono occorrere in text
 \end{DoxyPostcond}
 
 
-Definition at line 80 of file cf-\/utils.\+c.
-
-
-
-References all\+\_\+consonants(), all\+\_\+vowels(), get\+\_\+consonants(), get\+\_\+vowels(), and string\+\_\+in\+\_\+text().
-
-\mbox{\Hypertarget{cf-utils_8c_af560af2a103a6552e35c76b679a3bd86}\label{cf-utils_8c_af560af2a103a6552e35c76b679a3bd86}} 
-\index{cf-\/utils.\+c@{cf-\/utils.\+c}!get\+\_\+consonant@{get\+\_\+consonant}}
-\index{get\+\_\+consonant@{get\+\_\+consonant}!cf-\/utils.\+c@{cf-\/utils.\+c}}
-\subsubsection{\texorpdfstring{get\+\_\+consonant()}{get\_consonant()}}
-{\footnotesize\ttfamily static void get\+\_\+consonant (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text,  }\item[{char $\ast$}]{cons,  }\item[{int}]{i,  }\item[{int $\ast$}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Definition at line 39 of file cf-\/utils.\+c.
-
-
-
-References is\+\_\+consonant().
-
-
-
-Referenced by get\+\_\+consonants().
-
-\mbox{\Hypertarget{cf-utils_8c_a83e0c1cae14b4a73e1c3bfcc3ba019ff}\label{cf-utils_8c_a83e0c1cae14b4a73e1c3bfcc3ba019ff}} 
-\index{cf-\/utils.\+c@{cf-\/utils.\+c}!get\+\_\+consonants@{get\+\_\+consonants}}
-\index{get\+\_\+consonants@{get\+\_\+consonants}!cf-\/utils.\+c@{cf-\/utils.\+c}}
-\subsubsection{\texorpdfstring{get\+\_\+consonants()}{get\_consonants()}}
-{\footnotesize\ttfamily static void get\+\_\+consonants (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text,  }\item[{char $\ast$}]{cons }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Definition at line 44 of file cf-\/utils.\+c.
-
-
-
-References E\+OS, get\+\_\+consonant(), and Z\+E\+RO.
-
-
-
-Referenced by cons\+\_\+vow().
-
-\mbox{\Hypertarget{cf-utils_8c_a84a167d1e68d87ee5bdb1f2b1d530ae4}\label{cf-utils_8c_a84a167d1e68d87ee5bdb1f2b1d530ae4}} 
-\index{cf-\/utils.\+c@{cf-\/utils.\+c}!get\+\_\+vowel@{get\+\_\+vowel}}
-\index{get\+\_\+vowel@{get\+\_\+vowel}!cf-\/utils.\+c@{cf-\/utils.\+c}}
-\subsubsection{\texorpdfstring{get\+\_\+vowel()}{get\_vowel()}}
-{\footnotesize\ttfamily static void get\+\_\+vowel (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text,  }\item[{char $\ast$}]{vow,  }\item[{int}]{i,  }\item[{int $\ast$}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Definition at line 27 of file cf-\/utils.\+c.
-
-
-
-References is\+\_\+vowel().
-
-
-
-Referenced by get\+\_\+vowels().
-
-\mbox{\Hypertarget{cf-utils_8c_a9fb030103225ea13ffd73f5c884f69ae}\label{cf-utils_8c_a9fb030103225ea13ffd73f5c884f69ae}} 
-\index{cf-\/utils.\+c@{cf-\/utils.\+c}!get\+\_\+vowels@{get\+\_\+vowels}}
-\index{get\+\_\+vowels@{get\+\_\+vowels}!cf-\/utils.\+c@{cf-\/utils.\+c}}
-\subsubsection{\texorpdfstring{get\+\_\+vowels()}{get\_vowels()}}
-{\footnotesize\ttfamily static void get\+\_\+vowels (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text,  }\item[{char $\ast$}]{vow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Definition at line 32 of file cf-\/utils.\+c.
-
-
-
-References E\+OS, get\+\_\+vowel(), and Z\+E\+RO.
-
-
-
-Referenced by cons\+\_\+vow().
-
-\mbox{\Hypertarget{cf-utils_8c_ad3e5bf79af86d63a23de009cc0c567f3}\label{cf-utils_8c_ad3e5bf79af86d63a23de009cc0c567f3}} 
-\index{cf-\/utils.\+c@{cf-\/utils.\+c}!is\+\_\+consonant@{is\+\_\+consonant}}
-\index{is\+\_\+consonant@{is\+\_\+consonant}!cf-\/utils.\+c@{cf-\/utils.\+c}}
-\subsubsection{\texorpdfstring{is\+\_\+consonant()}{is\_consonant()}}
-{\footnotesize\ttfamily static bool is\+\_\+consonant (\begin{DoxyParamCaption}\item[{char}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Definition at line 23 of file cf-\/utils.\+c.
-
-
-
-References is\+\_\+vowel().
-
-
-
-Referenced by all\+\_\+consonants(), and get\+\_\+consonant().
-
-\mbox{\Hypertarget{cf-utils_8c_abe4e536dc09d41a523c0ed260dfca457}\label{cf-utils_8c_abe4e536dc09d41a523c0ed260dfca457}} 
-\index{cf-\/utils.\+c@{cf-\/utils.\+c}!is\+\_\+vowel@{is\+\_\+vowel}}
-\index{is\+\_\+vowel@{is\+\_\+vowel}!cf-\/utils.\+c@{cf-\/utils.\+c}}
-\subsubsection{\texorpdfstring{is\+\_\+vowel()}{is\_vowel()}}
-{\footnotesize\ttfamily static bool is\+\_\+vowel (\begin{DoxyParamCaption}\item[{char}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Definition at line 18 of file cf-\/utils.\+c.
-
-
-
-References A, E, I, O, and U.
-
-
-
-Referenced by all\+\_\+vowels(), get\+\_\+vowel(), and is\+\_\+consonant().
-
-\mbox{\Hypertarget{cf-utils_8c_a6e46433aa46161430fad365e577878e6}\label{cf-utils_8c_a6e46433aa46161430fad365e577878e6}} 
-\index{cf-\/utils.\+c@{cf-\/utils.\+c}!string\+\_\+in\+\_\+text@{string\+\_\+in\+\_\+text}}
-\index{string\+\_\+in\+\_\+text@{string\+\_\+in\+\_\+text}!cf-\/utils.\+c@{cf-\/utils.\+c}}
-\subsubsection{\texorpdfstring{string\+\_\+in\+\_\+text()}{string\_in\_text()}}
-{\footnotesize\ttfamily static bool string\+\_\+in\+\_\+text (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text,  }\item[{char $\ast$}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Definition at line 73 of file cf-\/utils.\+c.
-
-
-
-References char\+\_\+in\+\_\+text(), and Z\+E\+RO.
-
-
-
-Referenced by cons\+\_\+vow().
-
-
-
-\subsection{Variable Documentation}
-\mbox{\Hypertarget{cf-utils_8c_a530d2fc72f6a33c2d8cddd40bf4e7a34}\label{cf-utils_8c_a530d2fc72f6a33c2d8cddd40bf4e7a34}} 
-\index{cf-\/utils.\+c@{cf-\/utils.\+c}!A@{A}}
-\index{A@{A}!cf-\/utils.\+c@{cf-\/utils.\+c}}
-\subsubsection{\texorpdfstring{A}{A}}
-{\footnotesize\ttfamily const char A = \textquotesingle{}A\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Definition at line 16 of file cf-\/utils.\+c.
-
-
-
-Referenced by is\+\_\+vowel().
-
-\mbox{\Hypertarget{cf-utils_8c_ad9a4713c071a9d59ce6c367755a21207}\label{cf-utils_8c_ad9a4713c071a9d59ce6c367755a21207}} 
-\index{cf-\/utils.\+c@{cf-\/utils.\+c}!E@{E}}
-\index{E@{E}!cf-\/utils.\+c@{cf-\/utils.\+c}}
-\subsubsection{\texorpdfstring{E}{E}}
-{\footnotesize\ttfamily const char E = \textquotesingle{}E\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Definition at line 15 of file cf-\/utils.\+c.
-
-
-
-Referenced by is\+\_\+vowel().
-
-\mbox{\Hypertarget{cf-utils_8c_ae8ab676de0a059d5911f0fc60fe47a1e}\label{cf-utils_8c_ae8ab676de0a059d5911f0fc60fe47a1e}} 
-\index{cf-\/utils.\+c@{cf-\/utils.\+c}!E\+OS@{E\+OS}}
-\index{E\+OS@{E\+OS}!cf-\/utils.\+c@{cf-\/utils.\+c}}
-\subsubsection{\texorpdfstring{E\+OS}{EOS}}
-{\footnotesize\ttfamily const char E\+OS = \textquotesingle{}\textbackslash{}0\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Definition at line 10 of file cf-\/utils.\+c.
-
-
-
-Referenced by get\+\_\+consonants(), and get\+\_\+vowels().
-
-\mbox{\Hypertarget{cf-utils_8c_ab9cfcf92a6915b736872d475dd536aa6}\label{cf-utils_8c_ab9cfcf92a6915b736872d475dd536aa6}} 
-\index{cf-\/utils.\+c@{cf-\/utils.\+c}!I@{I}}
-\index{I@{I}!cf-\/utils.\+c@{cf-\/utils.\+c}}
-\subsubsection{\texorpdfstring{I}{I}}
-{\footnotesize\ttfamily const char I = \textquotesingle{}I\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Definition at line 14 of file cf-\/utils.\+c.
-
-
-
-Referenced by is\+\_\+vowel().
-
-\mbox{\Hypertarget{cf-utils_8c_ada65313d692e42532499ce96bd3150e7}\label{cf-utils_8c_ada65313d692e42532499ce96bd3150e7}} 
-\index{cf-\/utils.\+c@{cf-\/utils.\+c}!O@{O}}
-\index{O@{O}!cf-\/utils.\+c@{cf-\/utils.\+c}}
-\subsubsection{\texorpdfstring{O}{O}}
-{\footnotesize\ttfamily const char O = \textquotesingle{}O\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Definition at line 13 of file cf-\/utils.\+c.
-
-
-
-Referenced by is\+\_\+vowel().
-
-\mbox{\Hypertarget{cf-utils_8c_a90784a38cd61f391acb0d43bac12558d}\label{cf-utils_8c_a90784a38cd61f391acb0d43bac12558d}} 
-\index{cf-\/utils.\+c@{cf-\/utils.\+c}!U@{U}}
-\index{U@{U}!cf-\/utils.\+c@{cf-\/utils.\+c}}
-\subsubsection{\texorpdfstring{U}{U}}
-{\footnotesize\ttfamily const char U = \textquotesingle{}U\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Definition at line 12 of file cf-\/utils.\+c.
-
-
-
-Referenced by is\+\_\+vowel().
-
-\mbox{\Hypertarget{cf-utils_8c_acdb9580f8c1b2955aa58958261a6c582}\label{cf-utils_8c_acdb9580f8c1b2955aa58958261a6c582}} 
-\index{cf-\/utils.\+c@{cf-\/utils.\+c}!Z\+E\+RO@{Z\+E\+RO}}
-\index{Z\+E\+RO@{Z\+E\+RO}!cf-\/utils.\+c@{cf-\/utils.\+c}}
-\subsubsection{\texorpdfstring{Z\+E\+RO}{ZERO}}
-{\footnotesize\ttfamily const int Z\+E\+RO = 0\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Definition at line 11 of file cf-\/utils.\+c.
-
-
-
-Referenced by all\+\_\+consonants(), all\+\_\+vowels(), char\+\_\+in\+\_\+text(), get\+\_\+consonants(), get\+\_\+vowels(), and string\+\_\+in\+\_\+text().
+Definition at line 82 of file cf-\/utils.\-c.
+
+\hypertarget{cf-utils_8c_ad3a710147fcfa74c82b72f4339e5d729}{\index{cf-\/utils.\-c@{cf-\/utils.\-c}!get\-\_\-consonant@{get\-\_\-consonant}}
+\index{get\-\_\-consonant@{get\-\_\-consonant}!cf-utils.c@{cf-\/utils.\-c}}
+\subsubsection[{get\-\_\-consonant}]{\setlength{\rightskip}{0pt plus 5cm}int get\-\_\-consonant (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{text, }
+\item[{int}]{i, }
+\item[{int}]{k, }
+\item[{char $\ast$}]{cons}
+\end{DoxyParamCaption}
+)}}\label{cf-utils_8c_ad3a710147fcfa74c82b72f4339e5d729}
+
+
+Definition at line 41 of file cf-\/utils.\-c.
+
+\hypertarget{cf-utils_8c_a3aec4bc9ade9233c7c43bf64d38bc529}{\index{cf-\/utils.\-c@{cf-\/utils.\-c}!get\-\_\-vowel@{get\-\_\-vowel}}
+\index{get\-\_\-vowel@{get\-\_\-vowel}!cf-utils.c@{cf-\/utils.\-c}}
+\subsubsection[{get\-\_\-vowel}]{\setlength{\rightskip}{0pt plus 5cm}int get\-\_\-vowel (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{text, }
+\item[{int}]{i, }
+\item[{int}]{k, }
+\item[{char $\ast$}]{cons}
+\end{DoxyParamCaption}
+)}}\label{cf-utils_8c_a3aec4bc9ade9233c7c43bf64d38bc529}
+
+
+Definition at line 28 of file cf-\/utils.\-c.
 

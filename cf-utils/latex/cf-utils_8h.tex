@@ -1,32 +1,36 @@
-\hypertarget{cf-utils_8h}{}\section{src/cf-\/utils.h File Reference}
-\label{cf-utils_8h}\index{src/cf-\/utils.\+h@{src/cf-\/utils.\+h}}
-{\ttfamily \#include $<$assert.\+h$>$}\newline
-{\ttfamily \#include $<$ctype.\+h$>$}\newline
-{\ttfamily \#include $<$stdlib.\+h$>$}\newline
-{\ttfamily \#include $<$stdbool.\+h$>$}\newline
-{\ttfamily \#include $<$string.\+h$>$}\newline
+\hypertarget{cf-utils_8h}{\section{src/cf-\/utils.h File Reference}
+\label{cf-utils_8h}\index{src/cf-\/utils.\-h@{src/cf-\/utils.\-h}}
+}
+{\ttfamily \#include $<$assert.\-h$>$}\\*
+{\ttfamily \#include $<$ctype.\-h$>$}\\*
+{\ttfamily \#include $<$stdbool.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{cf-utils_8h_a4721e1e7e0b6b0fece1aafcc9d4e0077}{cons\+\_\+vow} (const char $\ast$text, char $\ast$cons, char $\ast$vow)
+void \hyperlink{cf-utils_8h_a4721e1e7e0b6b0fece1aafcc9d4e0077}{cons\-\_\-vow} (const char $\ast$text, char $\ast$cons, char $\ast$vow)
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{cf-utils_8h_a4721e1e7e0b6b0fece1aafcc9d4e0077}\label{cf-utils_8h_a4721e1e7e0b6b0fece1aafcc9d4e0077}} 
-\index{cf-\/utils.\+h@{cf-\/utils.\+h}!cons\+\_\+vow@{cons\+\_\+vow}}
-\index{cons\+\_\+vow@{cons\+\_\+vow}!cf-\/utils.\+h@{cf-\/utils.\+h}}
-\subsubsection{\texorpdfstring{cons\+\_\+vow()}{cons\_vow()}}
-{\footnotesize\ttfamily void cons\+\_\+vow (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text,  }\item[{char $\ast$}]{cons,  }\item[{char $\ast$}]{vow }\end{DoxyParamCaption})}
-
-Estrae le consonanti e le vocali da una stringa di caratteri. La procedura popola due array (parametri di output) secondo questo criterio\+: nell\textquotesingle{}array cons sono inserite tutte le consonanti di text (nell\textquotesingle{}ordine in cui compaiono), mentre in vow sono inserite tutte le vocali di text (nell\textquotesingle{}ordine in cui compaiono).
+\hypertarget{cf-utils_8h_a4721e1e7e0b6b0fece1aafcc9d4e0077}{\index{cf-\/utils.\-h@{cf-\/utils.\-h}!cons\-\_\-vow@{cons\-\_\-vow}}
+\index{cons\-\_\-vow@{cons\-\_\-vow}!cf-utils.h@{cf-\/utils.\-h}}
+\subsubsection[{cons\-\_\-vow}]{\setlength{\rightskip}{0pt plus 5cm}void cons\-\_\-vow (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{text, }
+\item[{char $\ast$}]{cons, }
+\item[{char $\ast$}]{vow}
+\end{DoxyParamCaption}
+)}}\label{cf-utils_8h_a4721e1e7e0b6b0fece1aafcc9d4e0077}
+Estrae le consonanti e le vocali da una stringa di caratteri. La procedura popola due array (parametri di output) secondo questo criterio\-: nell'array cons sono inserite tutte le consonanti di text (nell'ordine in cui compaiono), mentre in vow sono inserite tutte le vocali di text (nell'ordine in cui compaiono).
 
 \begin{DoxyWarning}{Warning}
 Il case delle lettere deve essere rispettato. 
 
 I caratteri non afabetici devono essere ignorati. 
 
-La lettera \textquotesingle{}Y\textquotesingle{} o \textquotesingle{}y\textquotesingle{} è considerata consonante. 
+La lettera 'Y' o 'y' è considerata consonante. 
 
 tutti i parametri sono stringhe.
 \end{DoxyWarning}
@@ -40,7 +44,7 @@ tutti i parametri sono stringhe.
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
-nessun parametro deve essere N\+U\+LL 
+nessun parametro deve essere N\-U\-L\-L 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
 la lunghezza di str non deve essere inferiore alla somma delle lunghezze di cons e di vow 
@@ -55,9 +59,5 @@ tutti i caratteri di vow devono occorrere in text
 \end{DoxyPostcond}
 
 
-Definition at line 80 of file cf-\/utils.\+c.
-
-
-
-References all\+\_\+consonants(), all\+\_\+vowels(), get\+\_\+consonants(), get\+\_\+vowels(), and string\+\_\+in\+\_\+text().
+Definition at line 82 of file cf-\/utils.\-c.
 
