@@ -25,32 +25,6 @@ static bool is_consonant(char a){
 	return isalpha(a)&&!is_vowel(a);
 }
 
-int get_vowel(const char* text, int i, int k, char* cons) {
-	if (is_vowel(text[i]))
-		cons[k++] = text[i];
-	return k;
-}
-
-static void get_vowels(const char* text, char* cons){
-	int k = ZERO;
-	for (int i = ZERO; i < strlen(text); i++)
-		k = get_vowel(text, i, k, cons);
-	cons[k] = EOS;
-}
-
-int get_consonant(const char* text, int i, int k, char* cons) {
-	if (is_consonant(text[i]))
-		cons[k++] = text[i];
-	return k;
-}
-
-static void get_consonants(const char* text, char* cons){
-	int k = ZERO;
-	for (int i = ZERO; i < strlen(text); i++)
-		k = get_consonant(text, i, k, cons);
-	cons[k] = EOS;
-}
-
 static bool all_vowels(char* text){
 	bool flag = true;
 	for (int i = ZERO; i < strlen(text) && flag; i++)
@@ -79,13 +53,43 @@ static bool text_in_text(const char* a, char* b){
 	return flag;
 }
 
+static int get_vowel(const char* text, int i, int j, char* vow) {
+	if (is_vowel(text[i]))
+		vow[j++] = text[i];
+	return j;
+}
+
+static void get_vowels(const char* text, char* vow) {
+	int j = ZERO;
+	for (int i = ZERO; i < strlen(text); i++)
+		j = get_vowel(text, i, j, vow);
+	vow[j] = EOS;
+}
+
+static int get_consonant(const char* text, int i, int j, char* cons) {
+	if (is_consonant(text[i]))
+		cons[j++] = text[i];
+	return j;
+}
+
+static void get_consonants(const char* text, char* cons) {
+	int j = ZERO;
+	for (int i = ZERO; i < strlen(text); i++)
+		j = get_consonant(text, i, j, cons);
+	cons[j] = EOS;
+}
+
+static bool are_valid_length(const char* text, char* cons, char* vow) {
+	return strlen(text) >= strlen(cons) + strlen(vow);
+}
+
 void cons_vow(const char* text, char* cons, char* vow){
 	assert(text!=NULL);
 	assert(cons!=NULL);
 	assert(vow!=NULL);
 	get_vowels(text, vow);
-	get_consonants(text,cons);
-	assert(strlen(text)>=(strlen(cons)+strlen(vow)));
+	get_consonants(text, cons);
+	assert(are_valid_length(text,cons,vow));
 	assert(all_vowels(vow));
 	assert(all_consonants(cons));
 	assert(text_in_text(text,cons));
